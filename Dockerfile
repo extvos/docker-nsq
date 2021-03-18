@@ -10,7 +10,7 @@ RUN git checkout v1.2.0 \
  && CGO_ENABLED=0 make DESTDIR=/opt PREFIX=/nsq BLDFLAGS='-ldflags="-s -w"' install
 
 
-FROM extvos/alpine:runit
+FROM extvos/alpine:latest
 MAINTAINER  "Mingcai SHEN <archsh@gmail.com>"
 
 EXPOSE 4150 4151 4160 4161 4170 4171
