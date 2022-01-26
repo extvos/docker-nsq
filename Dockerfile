@@ -1,5 +1,5 @@
 FROM extvos/golang:latest AS build
-
+RUN apk update && apk add git
 RUN mkdir -p /go/src/github.com/nsqio/ \
     && git clone https://github.com/nsqio/nsq.git /go/src/github.com/nsqio/nsq
 WORKDIR      /go/src/github.com/nsqio/nsq
