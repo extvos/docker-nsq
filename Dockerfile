@@ -1,4 +1,4 @@
-FROM golang:latest AS build
+FROM extvos/golang:latest AS build
 
 RUN mkdir -p /go/src/github.com/nsqio/ \
     && git clone https://github.com/nsqio/nsq.git /go/src/github.com/nsqio/nsq
